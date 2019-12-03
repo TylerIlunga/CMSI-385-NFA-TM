@@ -1,0 +1,24 @@
+{
+  "name": "CMSI-385-Final",
+  "version": "1.0.0",
+  "description": "Project: Implementation of a nondeterministic finite automaton(NFA)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerIlunga/CMSI-385-Final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TylerIlunga/CMSI-385-Final/issues"
+  },
+  "homepage": "https://github.com/TylerIlunga/CMSI-385-Final#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
