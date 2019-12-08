@@ -1,19 +1,20 @@
 const Parser = require('../lib/Parser');
-const NFA = require('../lib/NFA');
+const TM = require('../lib/TM');
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
   terminal: false,
 });
-const parser = new Parser(rl, 'NFA');
+
+const parser = new Parser(rl, 'TM');
 
 rl.on('begin', _ => {
   if (!parser.completedParsing()) {
     return console.log('Please follow the instructions above.');
   }
-  const machine = new NFA(parser);
-  console.log('NFA::', machine);
+  const machine = new TM(parser);
+  console.log('TM::', machine);
   rl.question('Please enter a string to evaluate below:\n', word => {
     const isAccepted = word
       .split('')

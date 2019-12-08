@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "nfadev": "nodemon ./nfa/index.js",
-    "nfastart": "node ./nfa/index.js"
+    "nfastart": "node ./nfa/index.js",
+    "tmdev": "nodemon ./tm/index.js",
+    "tmstart": "node ./tm/index.js"
   },
   "repository": {
     "type": "git",
