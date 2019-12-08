@@ -4,8 +4,8 @@
   "description": "Project: Implementation of a nondeterministic finite automaton(NFA)",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "nfadev": "nodemon ./nfa/index.js",
+    "nfastart": "node ./nfa/index.js"
   },
   "repository": {
     "type": "git",

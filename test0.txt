@@ -1,0 +1,11 @@
+start=q0;accept=q5
+q0:a->q1
+q0->q5
+q1:b->q2
+q2:a->q3
+q2->q5
+q3:b->q4
+q4:a->q5
+q5->q2
+begin
+ababaλabaλabaa
