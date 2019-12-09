@@ -21,7 +21,7 @@ rl.on('begin', _ => {
       .filter(c => machine.alphabet.has(c))
       .includes(false)
       ? false
-      : machine.accept(word);
+      : machine.begin(word);
     console.log(`isAccepted: ${isAccepted}`);
     rl.emit('begin');
   });
