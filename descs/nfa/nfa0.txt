@@ -8,4 +8,10 @@ q3:b->q4
 q4:a->q5
 q5->q2
 begin
+λ
+ba
+abλ
+ababaλ
 ababaλabaλaba
+ababaλabaλabaλabaλabaλaba
+λba

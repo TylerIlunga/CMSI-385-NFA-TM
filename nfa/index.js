@@ -1,26 +1,21 @@
 const Parser = require('../lib/Parser');
 const NFA = require('../lib/NFA');
-const readline = require('readline');
-const rl = readline.createInterface({
+const rl = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout,
   terminal: false,
 });
-const parser = new Parser(rl, 'NFA');
+const nfaParser = new Parser(rl, 'NFA');
 
 rl.on('begin', _ => {
-  if (!parser.completedParsing()) {
+  if (!nfaParser.completedParsing()) {
     return console.log('Please follow the instructions above.');
   }
-  const machine = new NFA(parser);
+  const machine = new NFA(nfaParser);
   console.log('NFA::', machine);
   rl.question('Please enter a string to evaluate below:\n', word => {
-    const isAccepted = word
-      .split('')
-      .filter(c => machine.alphabet.has(c))
-      .includes(false)
-      ? false
-      : machine.accept(word);
+    const invalidSyms = word.split('').find(c => !machine.alphabet.has(c));
+    const isAccepted = invalidSyms === undefined ? machine.accept(word) : false;
     console.log(`isAccepted: ${isAccepted}`);
     rl.emit('begin');
   });
