@@ -1,14 +1,36 @@
 λ: true
 
-ababaλabaλaba: true
+001: true
 
-λba: false
+01: false
 
-ababaλabaλabaλabaλabaλaba: true
+0101: false
 
-abλ: true
+1110001: false
 
-ababaλ: false
+1001λ01λ01λ10λ10: true
 
-ba: false
+1001λ01λ01λ10λ10λ01λ1: true
+
+1001λ01λ01λ10λ10λ011: false
+
+1001λ01λ01λ10λ10λ01 : false
+
+1001λ01λ01λ10λ10λ01λ1λ1: true
+
+10101: false
+
+1λ01λ01: true
+
+1λ0100: false
+
+10000: false
+
+01011010010100: false
+
+1111: false
+
+1111001: true
+
+1: false
 

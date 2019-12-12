@@ -1,4 +1,5 @@
 const Parser = require('../lib/Parser');
+const { persistResult } = require('../lib/util');
 const TM = require('../lib/TM');
 const rl = require('readline').createInterface({
   input: process.stdin,
@@ -14,10 +15,10 @@ rl.on('begin', _ => {
   const machine = new TM(tmParser);
   console.log('TM::', machine);
   rl.question('Please enter a string to evaluate below:\n', word => {
+    console.log('input string:', word);
     const invalidSyms = word.split('').find(c => !machine.alphabet.has(c));
-    console.log('invalidSyms::', invalidSyms);
     const isAccepted = invalidSyms === undefined ? machine.begin(word) : false;
-    console.log(`isAccepted: ${isAccepted}`);
+    persistResult(word, isAccepted, __dirname + '/../descs/tm/results.txt');
     rl.emit('begin');
   });
 });
