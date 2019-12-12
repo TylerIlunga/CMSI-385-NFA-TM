@@ -1,4 +1,4 @@
-# CMSI-385-Final
+# CMSI-385-NFA-TM
 
 Project: Implementation of a nondeterministic finite automaton(NFA) + a Turing Machine
 
