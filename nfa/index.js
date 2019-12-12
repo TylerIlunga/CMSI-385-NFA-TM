@@ -1,6 +1,6 @@
 const Parser = require('../lib/Parser');
-const { persistResult } = require('../lib/util');
 const NFA = require('../lib/NFA');
+const { persistResults } = require('../lib/Util');
 const rl = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -17,7 +17,7 @@ rl.on('begin', _ => {
     console.log('input string:', word);
     const invalidSyms = word.split('').find(c => !machine.alphabet.has(c));
     const isAccepted = invalidSyms === undefined ? machine.accept(word) : false;
-    persistResult(word, isAccepted, __dirname + '/../descs/nfa/results.txt');
+    persistResults(word, isAccepted, __dirname + '/../descs/nfa/results.txt');
     rl.emit('begin');
   });
 });

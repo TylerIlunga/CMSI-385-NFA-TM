@@ -1,0 +1,32 @@
+B: true
+
+babbab: true
+
+aabbaa: true
+
+bb: true
+
+wayyaw: false
+
+moonnoom: false
+
+abaa: false
+
+baba: false
+
+abab: false
+
+baabb: false
+
+abbaa: false
+
+abbbabbabbababbbbababbabbabbba: true
+
+abbbabbabababababbabbabbba: false
+
+blueeulb: false
+
+aa: true
+
+abba: true
+

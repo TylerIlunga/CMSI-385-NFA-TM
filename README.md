@@ -26,3 +26,8 @@ Results:
 
 - By default, the results are written to /descs/{type}/results.txt
 - You can populate the environment variable "RESULTS_PATH" as well for a custom log path.
+
+Important notes:
+
+- _Please review descriptions to see how lambda transitions are handled._
+- _If you are using the (<) operator to stream in descriptions, make sure to add an extra space after the last input string_
