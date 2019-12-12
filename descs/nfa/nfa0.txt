@@ -1,4 +1,4 @@
-start=q0;accept=q5
+START=q0;ACCEPT=q5
 q0:a->q1
 q0->q5
 q1:b->q2

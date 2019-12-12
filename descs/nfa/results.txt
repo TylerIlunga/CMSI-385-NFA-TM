@@ -1,0 +1,14 @@
+λ: true
+
+ababaλabaλaba: true
+
+λba: false
+
+ababaλabaλabaλabaλabaλaba: true
+
+abλ: true
+
+ababaλ: false
+
+ba: false
+
